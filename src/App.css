@@ -184,7 +184,7 @@ p{
     text-decoration: none;
     letter-spacing: 2px;
     transition:  all linear 0.5s;
-    max-width: 100px;
+    width: 100px;
     font-weight: 500;
     border: none;
     cursor: pointer;
@@ -194,8 +194,13 @@ p{
     padding: 7px 3px;
     margin-top: 20px;
   }
+  .btn:hover{
+      width:150px;
+      letter-spacing: 4px;
+  }
 .home{
     background-image: url("./Bgimages/bg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     width: 100%;
@@ -216,8 +221,101 @@ p{
 .home .TitlePage p{
     color: #fff;
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+  }
+  header h3{
+      font-size: 2em;
+      color: #fff;
+  }
+  header span{
+    color: #ff0157;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  header ul{
+      /* position: relative; */
+      align-items:center;
+      display: flex;
+  }
+  header ul li{
+      list-style: none;
+      margin-left:30px;
+  }
+  header ul li a{
+      text-decoration: none;
+      font-weight: 300;
+      color:#fff;
+  }
+  header ul li a:hover{
+      color:#ff0157;
+  }
+  header.sticky{
+    background: #fff;
+    padding: 4px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+  .sticky .logo {
+      color: black;
+      font-size: 2em;
+  }
+  .sticky a{
+      color: #111;;
+  }
 @media (max-width : 992px){
-
+    header{
+        padding: 10px;
+    }
+    header ul {
+        display:none;
+    }
+    header .active{
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;    
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background:#fff;
+    }
+    header .active li a{
+        color:black;
+    }
+    .menu-toggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-image: url("./Bgimages/menu.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menu-toggle-active {
+        background: url("./Bgimages/close.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+      header.sticky .menu-toggle , header.sticky .menu-toggle-active {
+        filter: invert(1);
+      }
     .home , .About{
         padding: 18px;
     }

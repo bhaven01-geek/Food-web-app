@@ -4,18 +4,21 @@ const Food_Experts = () => {
 
     const chef = [
         {
+            id : 1,
             pic: "Images/expert1.jpg",
             name: "Someone Famous"
         },
-        {
+        {   id : 2,
             pic: "Images/expert2.jpg",
             name: "Someone Famous"
         },
         {
+            id : 3,
             pic: "Images/expert3.jpg",
             name: "Someone Famous"
         },
         {
+            id : 4,
             pic: "Images/expert4.jpg",
             name: "Someone Famous"
         }
@@ -24,16 +27,16 @@ const Food_Experts = () => {
     return (
         <div>
             <div className="heading">
-                <h2 class="title">Our Kitchen <span>E</span>perts</h2>
+                <h2 className="title">Our Kitchen <span>E</span>xperts</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
             <div className="Expert-Card">
 
                 {
                     chef.map((experts) => {
-                        const { pic, name } = experts;
+                        const {id ,  pic, name } = experts;
                         return (
-                            <div className="Box">
+                            <div className="Box" key  = {id}>
                                 <div className="imgBx">
                                     <img src={pic} alt="experts" />
                                 </div>

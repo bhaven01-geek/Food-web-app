@@ -6,11 +6,12 @@ import Menu from './Components/Menu'
 import Testimonials from './Components/Testimonials'
 import ContactUs from './Components/ContactUs'
 import Home from './Components/Home'
-
+import HamburgerMenu from './Components/HamburgerMenu'
 
 const App = () => {
     return (
         <>
+            <HamburgerMenu />
             <Home />
             <About/>
             <Menu />

@@ -3,14 +3,17 @@ import React from 'react'
 const Testimonials = () => {
     const testmon = [
         {
+            id:1,
             testname: 'Someone famous',
             testpic: 'Images/testi1.jpg'
         },
         {
+            id:2,
             testname: 'Someone famous',
             testpic: 'Images/testi2.jpg'
         },
         {
+            id:3,
             testname: 'Someone famous',
             testpic: 'Images/testi3.jpg'
         }
@@ -25,9 +28,9 @@ const Testimonials = () => {
             <div className="Test-Card">
                 {
                     testmon.map((testp) => {
-                        const { testname, testpic } = testp;
+                        const { id , testname, testpic } = testp;
                         return (
-                            <div className="Box">
+                            <div className="Box" key = {id}>
 
                                 <div className="imgBx">
                                     <img src={testpic} />
